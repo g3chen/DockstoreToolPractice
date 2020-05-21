@@ -8,7 +8,7 @@ task hello {
 		File final = "copy.txt"
 	}
 	runtime {
-		docker: "g3chen/output-test:1.0"
+		docker: "g3chen/output-test2:2.0"
 		memory: mem + "GB"                                                     
 	}
 	meta {
