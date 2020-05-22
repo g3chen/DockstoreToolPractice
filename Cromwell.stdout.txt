@@ -1,135 +1,105 @@
-	[2020-05-22 01:16:49,98] [info] Running with database db.url = jdbc:hsqldb:mem:c8ee8f59-0895-4bd1-bf37-dcd96bc7bcce;shutdown=false;hsqldb.tx=mvcc
-	[2020-05-22 01:17:00,77] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
-	[2020-05-22 01:17:00,78] [info] [RenameWorkflowOptionsInMetadata] 100%
-	[2020-05-22 01:17:00,95] [info] Running with database db.url = jdbc:hsqldb:mem:b15ff999-b1cd-4a3e-b8dd-cd3bc6805cae;shutdown=false;hsqldb.tx=mvcc
-	[2020-05-22 01:17:01,63] [info] Slf4jLogger started
-	[2020-05-22 01:17:02,06] [info] Workflow heartbeat configuration:
+	[2020-05-22 02:12:19,90] [info] Running with database db.url = jdbc:hsqldb:mem:768433bf-caf5-4f51-a559-28cf17d4ad8f;shutdown=false;hsqldb.tx=mvcc
+	[2020-05-22 02:12:30,00] [info] Running migration RenameWorkflowOptionsInMetadata with a read batch size of 100000 and a write batch size of 100000
+	[2020-05-22 02:12:30,03] [info] [RenameWorkflowOptionsInMetadata] 100%
+	[2020-05-22 02:12:30,22] [info] Running with database db.url = jdbc:hsqldb:mem:c36e5d9a-96f3-43de-9db0-5c462b4e7223;shutdown=false;hsqldb.tx=mvcc
+	[2020-05-22 02:12:30,77] [info] Slf4jLogger started
+	[2020-05-22 02:12:31,16] [info] Workflow heartbeat configuration:
 	{
-	  "cromwellId" : "cromid-60e3bd3",
+	  "cromwellId" : "cromid-97a0070",
 	  "heartbeatInterval" : "2 minutes",
 	  "ttl" : "10 minutes",
 	  "failureShutdownDuration" : "5 minutes",
 	  "writeBatchSize" : 10000,
 	  "writeThreshold" : 10000
 	}
-	[2020-05-22 01:17:02,24] [info] Metadata summary refreshing every 1 second.
-	[2020-05-22 01:17:02,32] [[38;5;220mwarn[0m] 'docker.hash-lookup.gcr-api-queries-per-100-seconds' is being deprecated, use 'docker.hash-lookup.gcr.throttle' instead (see reference.conf)
-	[2020-05-22 01:17:02,32] [info] KvWriteActor configured to flush with batch size 200 and process rate 5 seconds.
-	[2020-05-22 01:17:02,40] [info] CallCacheWriteActor configured to flush with batch size 100 and process rate 3 seconds.
-	[2020-05-22 01:17:02,40] [info] WriteMetadataActor configured to flush with batch size 200 and process rate 5 seconds.
-	[2020-05-22 01:17:02,53] [info] JobExecutionTokenDispenser - Distribution rate: 50 per 1 seconds.
-	[2020-05-22 01:17:02,75] [info] SingleWorkflowRunnerActor: Version 44
-	[2020-05-22 01:17:02,78] [info] SingleWorkflowRunnerActor: Submitting workflow
-	[2020-05-22 01:17:02,95] [info] Unspecified type (Unspecified version) workflow a3938f7d-8206-4589-9cd0-5837e6b44a6e submitted
-	[2020-05-22 01:17:02,99] [info] SingleWorkflowRunnerActor: Workflow submitted [38;5;2ma3938f7d-8206-4589-9cd0-5837e6b44a6e[0m
-	[2020-05-22 01:17:03,00] [info] 1 new workflows fetched by cromid-60e3bd3: a3938f7d-8206-4589-9cd0-5837e6b44a6e
-	[2020-05-22 01:17:03,02] [info] WorkflowManagerActor Starting workflow [38;5;2ma3938f7d-8206-4589-9cd0-5837e6b44a6e[0m
-	[2020-05-22 01:17:03,04] [info] WorkflowManagerActor Successfully started WorkflowActor-a3938f7d-8206-4589-9cd0-5837e6b44a6e
-	[2020-05-22 01:17:03,04] [info] Retrieved 1 workflows from the WorkflowStoreActor
-	[2020-05-22 01:17:03,11] [info] WorkflowStoreHeartbeatWriteActor configured to flush with batch size 10000 and process rate 2 minutes.
-	[2020-05-22 01:17:03,32] [info] MaterializeWorkflowDescriptorActor [[38;5;2ma3938f7d[0m]: Parsing workflow as WDL draft-2
-	[2020-05-22 01:17:04,78] [info] MaterializeWorkflowDescriptorActor [[38;5;2ma3938f7d[0m]: Call-to-Backend assignments: test.hello -> Local
-	[2020-05-22 01:17:04,93] [[38;5;220mwarn[0m] Local [[38;5;2ma3938f7d[0m]: Key/s [memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
-	[2020-05-22 01:17:06,16] [info] WorkflowExecutionActor-a3938f7d-8206-4589-9cd0-5837e6b44a6e [[38;5;2ma3938f7d[0m]: Starting test.hello
-	[2020-05-22 01:17:06,58] [info] Assigned new job execution tokens to the following groups: a3938f7d: 1
-	[2020-05-22 01:17:07,54] [info] Not triggering log of token queue status. Effective log interval = None
-	[2020-05-22 01:17:07,71] [[38;5;220mwarn[0m] BackendPreparationActor_for_a3938f7d:test.hello:-1:1 [[38;5;2ma3938f7d[0m]: Docker lookup failed
-	java.lang.Exception: Unauthorized to get docker hash quay.io/f73chen/dockstore-test3:1.1
-		at cromwell.engine.workflow.WorkflowDockerLookupActor.cromwell$engine$workflow$WorkflowDockerLookupActor$$handleLookupFailure(WorkflowDockerLookupActor.scala:194)
-		at cromwell.engine.workflow.WorkflowDockerLookupActor$$anonfun$3.applyOrElse(WorkflowDockerLookupActor.scala:86)
-		at cromwell.engine.workflow.WorkflowDockerLookupActor$$anonfun$3.applyOrElse(WorkflowDockerLookupActor.scala:70)
-		at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:34)
-		at akka.actor.FSM.processEvent(FSM.scala:684)
-		at akka.actor.FSM.processEvent$(FSM.scala:681)
-		at cromwell.engine.workflow.WorkflowDockerLookupActor.akka$actor$LoggingFSM$$super$processEvent(WorkflowDockerLookupActor.scala:37)
-		at akka.actor.LoggingFSM.processEvent(FSM.scala:820)
-		at akka.actor.LoggingFSM.processEvent$(FSM.scala:802)
-		at cromwell.engine.workflow.WorkflowDockerLookupActor.processEvent(WorkflowDockerLookupActor.scala:37)
-		at akka.actor.FSM.akka$actor$FSM$$processMsg(FSM.scala:678)
-		at akka.actor.FSM$$anonfun$receive$1.applyOrElse(FSM.scala:672)
-		at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:34)
-		at cromwell.docker.DockerClientHelper$$anonfun$dockerResponseReceive$1.applyOrElse(DockerClientHelper.scala:16)
-		at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:171)
-		at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:172)
-		at akka.actor.Actor.aroundReceive(Actor.scala:517)
-		at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-		at cromwell.engine.workflow.WorkflowDockerLookupActor.aroundReceive(WorkflowDockerLookupActor.scala:37)
-		at akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
-		at akka.actor.ActorCell.invoke(ActorCell.scala:557)
-		at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
-		at akka.dispatch.Mailbox.run(Mailbox.scala:225)
-		at akka.dispatch.Mailbox.exec(Mailbox.scala:235)
-		at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-		at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-		at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-		at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-	
-	[2020-05-22 01:17:07,82] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2ma3938f7d[0mtest.hello:NA:1]: Unrecognized runtime attribute keys: memory
-	[2020-05-22 01:17:07,91] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2ma3938f7d[0mtest.hello:NA:1]: [38;5;5mbash output.sh "/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/inputs/333053777/file1.txt"[0m
-	[2020-05-22 01:17:07,96] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2ma3938f7d[0mtest.hello:NA:1]: executing: # make sure there is no preexisting Docker CID file
-	rm -f /tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/docker_cid
+	[2020-05-22 02:12:31,30] [info] WriteMetadataActor configured to flush with batch size 200 and process rate 5 seconds.
+	[2020-05-22 02:12:31,31] [info] Metadata summary refreshing every 1 second.
+	[2020-05-22 02:12:31,33] [info] KvWriteActor configured to flush with batch size 200 and process rate 5 seconds.
+	[2020-05-22 02:12:31,37] [[38;5;220mwarn[0m] 'docker.hash-lookup.gcr-api-queries-per-100-seconds' is being deprecated, use 'docker.hash-lookup.gcr.throttle' instead (see reference.conf)
+	[2020-05-22 02:12:31,37] [info] CallCacheWriteActor configured to flush with batch size 100 and process rate 3 seconds.
+	[2020-05-22 02:12:31,51] [info] JobExecutionTokenDispenser - Distribution rate: 50 per 1 seconds.
+	[2020-05-22 02:12:31,66] [info] SingleWorkflowRunnerActor: Version 44
+	[2020-05-22 02:12:31,68] [info] SingleWorkflowRunnerActor: Submitting workflow
+	[2020-05-22 02:12:31,82] [info] Unspecified type (Unspecified version) workflow b3b994d2-074b-4dcf-9557-b1a6f392555f submitted
+	[2020-05-22 02:12:31,89] [info] SingleWorkflowRunnerActor: Workflow submitted [38;5;2mb3b994d2-074b-4dcf-9557-b1a6f392555f[0m
+	[2020-05-22 02:12:31,90] [info] 1 new workflows fetched by cromid-97a0070: b3b994d2-074b-4dcf-9557-b1a6f392555f
+	[2020-05-22 02:12:31,97] [info] WorkflowManagerActor Starting workflow [38;5;2mb3b994d2-074b-4dcf-9557-b1a6f392555f[0m
+	[2020-05-22 02:12:31,99] [info] WorkflowManagerActor Successfully started WorkflowActor-b3b994d2-074b-4dcf-9557-b1a6f392555f
+	[2020-05-22 02:12:31,99] [info] Retrieved 1 workflows from the WorkflowStoreActor
+	[2020-05-22 02:12:32,06] [info] WorkflowStoreHeartbeatWriteActor configured to flush with batch size 10000 and process rate 2 minutes.
+	[2020-05-22 02:12:32,36] [info] MaterializeWorkflowDescriptorActor [[38;5;2mb3b994d2[0m]: Parsing workflow as WDL draft-2
+	[2020-05-22 02:12:33,66] [info] MaterializeWorkflowDescriptorActor [[38;5;2mb3b994d2[0m]: Call-to-Backend assignments: test.hello -> Local
+	[2020-05-22 02:12:33,79] [[38;5;220mwarn[0m] Local [[38;5;2mb3b994d2[0m]: Key/s [memory] is/are not supported by backend. Unsupported attributes will not be part of job executions.
+	[2020-05-22 02:12:34,98] [info] WorkflowExecutionActor-b3b994d2-074b-4dcf-9557-b1a6f392555f [[38;5;2mb3b994d2[0m]: Starting test.hello
+	[2020-05-22 02:12:35,55] [info] Assigned new job execution tokens to the following groups: b3b994d2: 1
+	[2020-05-22 02:12:36,52] [info] Not triggering log of token queue status. Effective log interval = None
+	[2020-05-22 02:12:36,74] [[38;5;220mwarn[0m] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb3b994d2[0mtest.hello:NA:1]: Unrecognized runtime attribute keys: memory
+	[2020-05-22 02:12:36,83] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb3b994d2[0mtest.hello:NA:1]: [38;5;5mbash output.sh "/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/inputs/-257003378/file1.txt"[0m
+	[2020-05-22 02:12:36,87] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb3b994d2[0mtest.hello:NA:1]: executing: # make sure there is no preexisting Docker CID file
+	rm -f /tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/docker_cid
 	# run as in the original configuration without --rm flag (will remove later)
 	docker run \
-	  --cidfile /tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/docker_cid \
+	  --cidfile /tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/docker_cid \
 	  -i \
 	   \
 	  --entrypoint /bin/bash \
-	  -v /tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello:/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello:delegated \
-	  quay.io/f73chen/dockstore-test3:1.1 /cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/script
+	  -v /tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello:/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello:delegated \
+	  quay.io/f73chen/dockstore-test3@sha256:bb99e3ef4ba413c9370a2032a582d1fc7bf1274bb413fbd2d4dac7bcf790c76c /cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/script
 	
 	# get the return code (working even if the container was detached)
-	rc=$(docker wait [38;5;5mcat /tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/docker_cid[0m)
+	rc=$(docker wait [38;5;5mcat /tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/docker_cid[0m)
 	
 	# remove the container after waiting
-	docker rm [38;5;5mcat /tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/docker_cid[0m
+	docker rm [38;5;5mcat /tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/docker_cid[0m
 	
 	# return exit code
 	exit $rc
-	[2020-05-22 01:17:12,40] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2ma3938f7d[0mtest.hello:NA:1]: job id: 24329
-	[2020-05-22 01:17:12,41] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2ma3938f7d[0mtest.hello:NA:1]: Status change from - to Done
-	[2020-05-22 01:17:14,40] [info] WorkflowExecutionActor-a3938f7d-8206-4589-9cd0-5837e6b44a6e [[38;5;2ma3938f7d[0m]: Workflow test complete. Final Outputs:
+	[2020-05-22 02:12:41,42] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb3b994d2[0mtest.hello:NA:1]: job id: 25967
+	[2020-05-22 02:12:41,44] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb3b994d2[0mtest.hello:NA:1]: Status change from - to WaitingForReturnCode
+	[2020-05-22 02:12:54,63] [info] BackgroundConfigAsyncJobExecutionActor [[38;5;2mb3b994d2[0mtest.hello:NA:1]: Status change from WaitingForReturnCode to Done
+	[2020-05-22 02:12:56,44] [info] WorkflowExecutionActor-b3b994d2-074b-4dcf-9557-b1a6f392555f [[38;5;2mb3b994d2[0m]: Workflow test complete. Final Outputs:
 	{
-	  "test.hello.final": "/tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/copy2.txt"
+	  "test.hello.final": "/tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/copy2.txt"
 	}
-	[2020-05-22 01:17:14,44] [info] WorkflowManagerActor WorkflowActor-a3938f7d-8206-4589-9cd0-5837e6b44a6e is in a terminal state: WorkflowSucceededState
-	[2020-05-22 01:17:22,52] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.
+	[2020-05-22 02:12:56,49] [info] WorkflowManagerActor WorkflowActor-b3b994d2-074b-4dcf-9557-b1a6f392555f is in a terminal state: WorkflowSucceededState
+	[2020-05-22 02:13:03,83] [info] SingleWorkflowRunnerActor workflow finished with status 'Succeeded'.
 	{
 	  "outputs": {
-	    "test.hello.final": "/tmp/1590110206687-0/cromwell-executions/test/a3938f7d-8206-4589-9cd0-5837e6b44a6e/call-hello/execution/copy2.txt"
+	    "test.hello.final": "/tmp/1590113536065-0/cromwell-executions/test/b3b994d2-074b-4dcf-9557-b1a6f392555f/call-hello/execution/copy2.txt"
 	  },
-	  "id": "a3938f7d-8206-4589-9cd0-5837e6b44a6e"
+	  "id": "b3b994d2-074b-4dcf-9557-b1a6f392555f"
 	}
-	[2020-05-22 01:17:27,45] [info] Workflow polling stopped
-	[2020-05-22 01:17:27,48] [info] Shutting down WorkflowStoreActor - Timeout = 5 seconds
-	[2020-05-22 01:17:27,48] [info] Shutting down WorkflowLogCopyRouter - Timeout = 5 seconds
-	[2020-05-22 01:17:27,49] [info] Aborting all running workflows.
-	[2020-05-22 01:17:27,49] [info] WorkflowStoreActor stopped
-	[2020-05-22 01:17:27,50] [info] WorkflowLogCopyRouter stopped
-	[2020-05-22 01:17:27,50] [info] Shutting down JobExecutionTokenDispenser - Timeout = 5 seconds
-	[2020-05-22 01:17:27,50] [info] JobExecutionTokenDispenser stopped
-	[2020-05-22 01:17:27,50] [info] 0 workflows released by cromid-60e3bd3
-	[2020-05-22 01:17:27,51] [info] Shutting down WorkflowManagerActor - Timeout = 3600 seconds
-	[2020-05-22 01:17:27,51] [info] WorkflowManagerActor All workflows finished
-	[2020-05-22 01:17:27,51] [info] WorkflowManagerActor stopped
-	[2020-05-22 01:17:27,77] [info] Connection pools shut down
-	[2020-05-22 01:17:27,78] [info] Shutting down SubWorkflowStoreActor - Timeout = 1800 seconds
-	[2020-05-22 01:17:27,78] [info] Shutting down JobStoreActor - Timeout = 1800 seconds
-	[2020-05-22 01:17:27,78] [info] Shutting down CallCacheWriteActor - Timeout = 1800 seconds
-	[2020-05-22 01:17:27,78] [info] CallCacheWriteActor Shutting down: 0 queued messages to process
-	[2020-05-22 01:17:27,78] [info] CallCacheWriteActor stopped
-	[2020-05-22 01:17:27,78] [info] Shutting down ServiceRegistryActor - Timeout = 1800 seconds
-	[2020-05-22 01:17:27,78] [info] KvWriteActor Shutting down: 0 queued messages to process
-	[2020-05-22 01:17:27,78] [info] WriteMetadataActor Shutting down: 0 queued messages to process
-	[2020-05-22 01:17:27,79] [info] Shutting down DockerHashActor - Timeout = 1800 seconds
-	[2020-05-22 01:17:27,79] [info] Shutting down IoProxy - Timeout = 1800 seconds
-	[2020-05-22 01:17:27,80] [info] DockerHashActor stopped
-	[2020-05-22 01:17:27,80] [info] IoProxy stopped
-	[2020-05-22 01:17:27,80] [info] SubWorkflowStoreActor stopped
-	[2020-05-22 01:17:27,80] [info] JobStoreActor stopped
-	[2020-05-22 01:17:27,80] [info] ServiceRegistryActor stopped
-	[2020-05-22 01:17:27,81] [info] Shutting down connection pool: curAllocated=0 idleQueues.size=0 waitQueue.size=0 maxWaitQueueLimit=256 closed=false
-	[2020-05-22 01:17:27,81] [info] Shutting down connection pool: curAllocated=0 idleQueues.size=0 waitQueue.size=0 maxWaitQueueLimit=256 closed=false
-	[2020-05-22 01:17:27,82] [info] Shutting down connection pool: curAllocated=0 idleQueues.size=0 waitQueue.size=0 maxWaitQueueLimit=256 closed=false
-	[2020-05-22 01:17:27,85] [info] Database closed
-	[2020-05-22 01:17:27,85] [info] Stream materializer shut down
-	[2020-05-22 01:17:27,86] [info] WDL HTTP import resolver closed
+	[2020-05-22 02:13:06,42] [info] Workflow polling stopped
+	[2020-05-22 02:13:06,45] [info] Shutting down WorkflowStoreActor - Timeout = 5 seconds
+	[2020-05-22 02:13:06,47] [info] Aborting all running workflows.
+	[2020-05-22 02:13:06,48] [info] Shutting down WorkflowLogCopyRouter - Timeout = 5 seconds
+	[2020-05-22 02:13:06,48] [info] 0 workflows released by cromid-97a0070
+	[2020-05-22 02:13:06,49] [info] Shutting down JobExecutionTokenDispenser - Timeout = 5 seconds
+	[2020-05-22 02:13:06,49] [info] WorkflowLogCopyRouter stopped
+	[2020-05-22 02:13:06,49] [info] JobExecutionTokenDispenser stopped
+	[2020-05-22 02:13:06,49] [info] WorkflowStoreActor stopped
+	[2020-05-22 02:13:06,49] [info] Shutting down WorkflowManagerActor - Timeout = 3600 seconds
+	[2020-05-22 02:13:06,49] [info] WorkflowManagerActor stopped
+	[2020-05-22 02:13:06,49] [info] WorkflowManagerActor All workflows finished
+	[2020-05-22 02:13:06,77] [info] Connection pools shut down
+	[2020-05-22 02:13:06,77] [info] Shutting down SubWorkflowStoreActor - Timeout = 1800 seconds
+	[2020-05-22 02:13:06,77] [info] Shutting down JobStoreActor - Timeout = 1800 seconds
+	[2020-05-22 02:13:06,77] [info] Shutting down CallCacheWriteActor - Timeout = 1800 seconds
+	[2020-05-22 02:13:06,77] [info] Shutting down ServiceRegistryActor - Timeout = 1800 seconds
+	[2020-05-22 02:13:06,77] [info] Shutting down DockerHashActor - Timeout = 1800 seconds
+	[2020-05-22 02:13:06,77] [info] CallCacheWriteActor Shutting down: 0 queued messages to process
+	[2020-05-22 02:13:06,77] [info] CallCacheWriteActor stopped
+	[2020-05-22 02:13:06,78] [info] Shutting down IoProxy - Timeout = 1800 seconds
+	[2020-05-22 02:13:06,78] [info] SubWorkflowStoreActor stopped
+	[2020-05-22 02:13:06,79] [info] JobStoreActor stopped
+	[2020-05-22 02:13:06,79] [info] IoProxy stopped
+	[2020-05-22 02:13:06,79] [info] WriteMetadataActor Shutting down: 0 queued messages to process
+	[2020-05-22 02:13:06,79] [info] KvWriteActor Shutting down: 0 queued messages to process
+	[2020-05-22 02:13:06,80] [info] DockerHashActor stopped
+	[2020-05-22 02:13:06,80] [info] Shutting down connection pool: curAllocated=0 idleQueues.size=0 waitQueue.size=0 maxWaitQueueLimit=256 closed=false
+	[2020-05-22 02:13:06,80] [info] Shutting down connection pool: curAllocated=0 idleQueues.size=0 waitQueue.size=0 maxWaitQueueLimit=256 closed=false
+	[2020-05-22 02:13:06,82] [info] Shutting down connection pool: curAllocated=0 idleQueues.size=0 waitQueue.size=0 maxWaitQueueLimit=256 closed=false
+	[2020-05-22 02:13:06,82] [info] ServiceRegistryActor stopped
+	[2020-05-22 02:13:06,86] [info] Database closed
+	[2020-05-22 02:13:06,86] [info] Stream materializer shut down
+	[2020-05-22 02:13:06,86] [info] WDL HTTP import resolver closed
