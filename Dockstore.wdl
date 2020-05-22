@@ -5,10 +5,10 @@ task hello {
 		bash output.sh "${file1}"
 	}
 	output {
-		File final = "copy.txt"
+		File final = "copy2.txt"
 	}
 	runtime {
-		docker: "g3chen/output-test2:2.0"
+		docker: "quay.io/f73chen/dockstore-test3:1.1"
 		memory: mem + "GB"                                                     
 	}
 	meta {

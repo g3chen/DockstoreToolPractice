@@ -10,3 +10,6 @@ output.sh file1.txt
 ls
 cat copy2.txt 
 exit
+cd ~
+output.sh file1.txt
+exit
