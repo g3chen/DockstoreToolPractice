@@ -6,7 +6,7 @@ MAINTAINER Fenglin Chen <g3chen@oicr.on.ca>
 
 # Setup packages
 USER root
-RUN apt-get -m update && apt-get install -y unzip zip openjdk-11-jre
+RUN apt-get -m update && apt-get install -y unzip zip openjdk-11-jre environment-modules
 
 # get the specific tool and install it in /usr/local/bin
 # RUN wget -q http://downloads.sourceforge.net/project/bamstats/BAMStats-1.25.zip
